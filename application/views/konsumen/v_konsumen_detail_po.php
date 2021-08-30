@@ -137,8 +137,8 @@ table{
 								</div>
 								<div class="x_content">
 										<div class="row">
-											<div class="col-sm-12 col-md-11 text-right">
-												<a href="<?php echo site_url('c_konsumen/export_po?buyer='.$buyer[0]["buyer_id"])?>" target="_blank" class="btn btn-danger btn-sm"><i class="fa fa-file"></i> Download PO </a>
+											<div class="col-sm-12 col-md-11 text-center row-pdf">
+												<a href="<?php echo site_url('c_konsumen/export_po?buyer='.$buyer[0]["buyer_id"])?>" target="_blank" class="btn btn-danger btn-sm btn-pdf"><i class="fa fa-file"></i> Download PO </a>
 											</div>
 										</div>
 										<br>
@@ -191,7 +191,7 @@ table{
 										<div class="field item form-group required">
 											<label class="col-form-label col-md-2 col-sm-3  label-align">Address Destination</label>
 											<div class="col-md-6 col-sm-6">
-												<textarea required="required" name='addr_dest' required="required" style="width: 500px;"
+												<textarea required="required" name='addr_dest' required="required" class="adress-input"
 													disabled><?php echo $buyer[0]['addr_dest']; ?></textarea>
 											</div>
 										</div>
@@ -204,9 +204,9 @@ table{
 											<div class="col-md-11">
 												<div class="card" style="width:100%;border:none;">
 													<div class="card-body">
-														<div class="row">
-															<div class="col-12">
-																<table id="data-item" class="display table" width="100%">
+														<div class="col-12">
+															<div class="card-box table-responsive">
+																<table id="datatable-buttons" class="table table-bordered" width="100%">
 																	<thead>
 																		<tr style="text-align: left;">
 																			<th>Name</th>
@@ -238,7 +238,7 @@ table{
 		</div>
 		<div class="col-md-6 offset-md-3" style="margin-top:1em">
 		<?php if($buyer[0]["is_complete"] == 0 || $buyer[0]["is_complete"] == ""){ ?>
-			<a href="<?php echo site_url('c_konsumen/konsumen_insert_po?buyer='.$buyer[0]["buyer_id"])?>" class="btn btn-info btn-lg btn-block"><i class="fa fa-pencil"></i> Edit </a>
+			<a href="<?php echo site_url('c_konsumen/konsumen_insert_po?buyer='.$buyer[0]["buyer_id"])?>" class="btn btn-info btn-lg btn-block btn-edit"><i class="fa fa-pencil"></i> Edit </a>
 		<?php } ?>
 	</div>
 	</div>

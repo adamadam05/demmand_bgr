@@ -165,7 +165,7 @@
                   <div class="row">
                     <div class="col-10 text-left">
                       <form action="<?= base_url("c_konsumen/konsumen_po")?>" method="GET">
-                        <div class="input-group input-group-sm w-50 m-4">
+                        <div class="input-group input-group-sm m-4 btn-cari">
                           <input class="form-control" name="dari" type="date" value="<?= isset($dari) ? $dari : null?>">
                           <div class="input-group-prepend input-group-append" style="margin-left: 1%;margin-right: 1%;height: 100%;">
                             <div class="input-group-text">-</div>

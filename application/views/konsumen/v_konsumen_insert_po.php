@@ -192,7 +192,7 @@ table{
 										<div class="field item form-group required">
 											<label class="col-form-label col-md-2 col-sm-3  label-align">Address Destination</label>
 											<div class="col-md-6 col-sm-6">
-												<textarea required="required" name='addr_dest' required="required" style="width: 500px;"
+												<textarea required="required" name='addr_dest' required="required" class="adress-input"
 													disabled><?php echo isset($userdata[0]["alamat"]) && !isset($buyer) ?$userdata[0]["alamat"]:$buyer[0]['addr_dest']; ?></textarea>
 											</div>
 										</div>
@@ -217,7 +217,8 @@ table{
 														</div>
 														<div class="row">
 															<div class="col-12">
-																<table id="data-item" class="display table" width="100%">
+															<div class="card-box table-responsive">
+																<table id="datatable-buttons" class="table table-bordered" width="100%">
 																	<thead>
 																		<tr style="text-align: left;">
 																			<th>Name</th>
@@ -334,16 +335,17 @@ table{
 		</div>
 	</div>
 	</div>
+																										</div>
 	<div class="ln_solid"></div>
 	<div class="row">
 		
 		<div class="col-md-2 offset-md-7" style="margin-top:1em">
 		<a href="<?= base_url("c_konsumen/konsumen_po"); ?>"><button type='button'
-				class="btn btn-secondary btn-block">Exit</button></a>																									
+				class="btn btn-secondary btn-block btn-exit">Exit</button></a>																									
 		</div>	
 		<div class="col-md-2" style="margin-top:1em">
 			<button type='button' data-toggle="modal" data-target="#myModalComplete"
-				class="btn btn-success btn-block">Submit</button>
+				class="btn btn-success btn-block btn-submit">Submit</button>
 		</div>																								
 	</div>
 	<?php }else{ ?>
